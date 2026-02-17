@@ -1,0 +1,40 @@
+id: io.github.elly_code.inscriptions
+# elementary SDK is not available on Flathub, so use the elementary BaseApp instead
+base: io.elementary.BaseApp
+base-version: 'circe-25.08'
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+command: io.github.elly_code.inscriptions
+
+finish-args:
+  - '--share=ipc'
+  - '--device=dri'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+  # Required for communication with DeepL API
+  - '--share=network'
+
+cleanup:
+  -  '/include'
+  -  '/lib/pkgconfig'
+  -  '/man'
+  -  '/share/doc'
+  -  '/share/gtk-doc'
+  -  '/share/man'
+  -  '/share/pkgconfig'
+  -  '/share/installed-tests'
+  -  '*.la'
+  -  '*.a'
+
+modules:
+  - name: inscriptions
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/elly-code/inscriptions.git
+        tag: 1.0.0-1
+        commit: 299eabfe8cafce39004eacb0f28f30cb2d6f2001
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
