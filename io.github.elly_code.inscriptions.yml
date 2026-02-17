@@ -15,6 +15,18 @@ finish-args:
   # Required for communication with external API
   - --share=network
 
+cleanup:
+  -  '/include'
+  -  '/lib/pkgconfig'
+  -  '/man'
+  -  '/share/doc'
+  -  '/share/gtk-doc'
+  -  '/share/man'
+  -  '/share/pkgconfig'
+  -  '/share/installed-tests'
+  -  '*.la'
+  -  '*.a'
+
 modules:
   - name: inscriptions
     buildsystem: meson
