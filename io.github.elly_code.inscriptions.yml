@@ -15,6 +15,13 @@ finish-args:
   # Required for communication with external API
   - --share=network
 
+cleanup:
+  -  /include
+  -  /lib/girepository-1.0
+  -  /lib/pkgconfig
+  -  /share/gir-1.0
+  -  /share/vala
+
 modules:
   - name: inscriptions
     buildsystem: meson
