@@ -3,7 +3,7 @@ id: io.github.elly_code.inscriptions
 base: io.elementary.BaseApp
 base-version: circe-25.08
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: io.github.elly_code.inscriptions
 
@@ -21,8 +21,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/elly-code/inscriptions.git
-        tag: 1.0.0-2
-        commit: 21dfccd49d3903f9efffdda17363afe4fbf6571f
+        tag: 1.1.0-2
+        commit: 0158c1b18da39d72f2f62faae88fa0000757260c
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
