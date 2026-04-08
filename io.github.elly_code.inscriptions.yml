@@ -31,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/elly-code/inscriptions.git
-        tag: 1.1.2-1
-        commit: 87f7e56443e90a6e42819b165effa89529b7db74
+        tag: 1.1.2-2
+        commit: 43308c847e8523e1904819c47d24eeecc07f8541
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
